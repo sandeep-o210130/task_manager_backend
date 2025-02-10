@@ -1,12 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express()
-const Task = require("/models/taskModel.js");
+const Task = require("./models/taskModel.js");
 const cors = require('cors');
 const flatted = require("flatted");
 const { error } = require("console");
-const auth = require("/middleware/auth.js");
-const User = require("/models/userModel");
+const auth = require("./middleware/auth");
+const User = require("./models/userModel");
 const bycryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const {body,validationResult} = require("express-validator");
