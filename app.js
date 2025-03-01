@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: true }));
 const port = 1234;
 
 async function main(){
-    await mongoose.connect("mongodb+srv://psandeepkumark:sandeepo210130@cluster0.d7dxk.mongodb.net/");
+    await mongoose.connect(process.env.MONGO_URI);
 }
 
 main().then(()=>{
